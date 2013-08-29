@@ -8,7 +8,7 @@ class Rack::Apocalypse404
   def call(env)
     status, headers, response = @app.call(env)
     type = headers["Content-Type"]
-    if !type.nil? && type.downcase.include?('text/html') && (status == 404 || status == 500)
+    if !type.nil? && type.downcase.include?('text/html') && (status.to_i > 400)
       puts " -- #{status} -- Redirecting to apocalyptic message...."
 
       spec = Gem::Specification.find_by_name("apocalypse-404")

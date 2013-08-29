@@ -1,6 +1,6 @@
 # Apocalypse404
 
-TODO: Write a gem description
+Generates an apocalyptic message for any 400/500 responses on your app
 
 ## Installation
 
@@ -18,8 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Sinatra:
+    require 'apocalypse-404'
+    use Rack::Apocalypse404
 
+Rails:
+  For Rails >3 simply including the gem should automatically include the middleware for rack
+  To manually include it:
+    config.middleware.use Rack::Apocalypse404
+    
 ## Contributing
 
 1. Fork it
