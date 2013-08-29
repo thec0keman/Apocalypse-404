@@ -27,6 +27,7 @@ Rails:
 
 - For Rails 3> simply including the gem should automatically include the middleware for rack
 - To manually include it `config.middleware.use Rack::Apocalypse404`
+
 ## Contributing
 
 1. Fork it
